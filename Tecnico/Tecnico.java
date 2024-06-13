@@ -32,6 +32,6 @@ public class Tecnico extends funcionario.Funcionario{
     }
     
     public void setFuncao(String funcao){
-        this.salario = salario;
+        this.funcao = funcao;
     }
 }
