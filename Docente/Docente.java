@@ -3,7 +3,7 @@ package Docente;
 public abstract class Docente extends funcionario.Funcionario {
     protected String titulacao;
     
-    public Docente(String codigo, String nome, double salario, String nivel){
+    public Docente(String codigo, String nome, double salario, String nivel, String titulacao){
         super(codigo, nome, salario, nivel);
         setTitulacao(titulacao);
     }
