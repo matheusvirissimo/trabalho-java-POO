@@ -193,6 +193,11 @@ public class Departamento {
         
         return relatorio;
     }
+
+    public String getDadosDepartamentos() {
+        String dados = "Departamento: " + getNome() + " - Codigo " + getCodigos();
+        return dados;
+    }
     
     public String getCodigos(){
         return codigo;
