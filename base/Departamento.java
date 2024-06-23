@@ -23,16 +23,16 @@ public class Departamento {
         }
     }
     
-    public void addEfetivo(String codigo, String nome, String nivel, String departamento, String titulacao){
+    public void addEfetivo(String codigo, String nome, String nivel, String departamento, String titulacao, String area){
         if(cont < MAX){
-            funcionarios[cont] = new DocenteEfetivo(codigo, nome, nivel, departamento, titulacao);
+            funcionarios[cont] = new DocenteEfetivo(codigo, nome, nivel, departamento, titulacao, area);
             cont++;
         }
     }
     
-    public void addSubstituto(String codigo, String nome, String nivel, String departamento, String titulacao){
+    public void addSubstituto(String codigo, String nome, String nivel, String departamento, String titulacao, int cargaHoraria){
         if(cont < MAX){
-            funcionarios[cont] = new DocenteSubstituto(codigo, nome, nivel, departamento, titulacao);
+            funcionarios[cont] = new DocenteSubstituto(codigo, nome, nivel, departamento, titulacao, cargaHoraria);
             cont++;
         }
     }

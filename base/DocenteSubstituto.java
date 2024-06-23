@@ -4,7 +4,7 @@ package base;
 public class DocenteSubstituto extends Docente{
     private int cargaHoraria;
     
-    public DocenteSubstituto(String codigo, String nome, String nivel, String departamento, String titulacao){
+    public DocenteSubstituto(String codigo, String nome, String nivel, String departamento, String titulacao, int cargaHoraria){
         super(codigo, nome, nivel, departamento, titulacao);
         setCargaHoraria(cargaHoraria);
         setDepartamento(departamento);

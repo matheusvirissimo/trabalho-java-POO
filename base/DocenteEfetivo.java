@@ -7,7 +7,7 @@ package base;
 public class DocenteEfetivo extends Docente{
     private String area;
     
-    public DocenteEfetivo(String codigo, String nome, String nivel, String departamento, String titulacao){
+    public DocenteEfetivo(String codigo, String nome, String nivel, String departamento, String titulacao, String area){
         super(codigo, nome, nivel, departamento, titulacao);
         setArea(area);
     }
