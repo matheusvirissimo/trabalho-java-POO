@@ -13,7 +13,7 @@ public class DocenteEfetivo extends Docente{
     }
     
     @Override
-    public double calcularSalario(){
+    public double calcularSalario(double salario){
         double salarioNovo = 0;
         
         if(nivel.equalsIgnoreCase("d1")){
@@ -32,6 +32,32 @@ public class DocenteEfetivo extends Docente{
         
         return salarioNovo;
     }
+    
+    @Override
+    public void exibir() {
+        System.out.println("*** DOCENTE EFETIVO ***");
+        System.out.println("Código: " + codigo);
+        System.out.println("Nome: " + nome);
+        System.out.println("Salário: R$" + calcularSalario(salario));
+        System.out.println("Nível: " + nivel);
+        System.out.println("Titulacao" + titulacao);
+        System.out.println("Departamento: " + departamento);
+        System.out.println("Área: " + area);
+    }
+
+    @Override
+    public String dados() {
+        String dados = "EFETIVO \n"
+                + "Código: " + codigo + "\n"
+                + "Nome: " + nome + "\n"
+                + "Salário: R$" + calcularSalario(salario) + "\n"
+                + "Nível: " + nivel + "\n"
+                + "Titulação: " + titulacao + "\n"
+                + "Departamento: " + departamento + "\n"
+                + "Área: " + area + "\n";
+        return dados;
+    }
+    
 
     public String getArea() {
         return area;
@@ -40,13 +66,6 @@ public class DocenteEfetivo extends Docente{
     public void setArea(String area){
         this.area = area;
     }
-    
-    public String getDepartamento(){
-        return departamento;
-    }
-    
-    public void setDepartamnto(String departamento){
-        this.departamento = departamento;
-    }
+   
     
 }

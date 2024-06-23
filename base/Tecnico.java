@@ -10,7 +10,7 @@ public class Tecnico extends Funcionario{
     }
     
     @Override 
-    public double calcularSalario(){
+    public double calcularSalario(double salario){
         double novoSalario = 0;
         if(nivel.equalsIgnoreCase("t1")){
             novoSalario = novoSalario + (novoSalario * Utils.T1);
@@ -25,6 +25,29 @@ public class Tecnico extends Funcionario{
         return novoSalario;
         
     } 
+    
+    @Override 
+    public void exibir(){
+        System.out.println("*** TÉCNICO ***");
+        System.out.println("Código: " + codigo);
+        System.out.println("Nome: " + nome);
+        System.out.println("Salário: R$" + calcularSalario(salario));
+        System.out.println("Nível: " + nivel);
+        System.out.println("Departamento: " + departamento);
+        System.out.println("Função: " + funcao);
+    }
+    
+    @Override
+    public String dados(){
+        String dados = "TÉCNICO \n" 
+                        + "Código: " + codigo + "\n"
+                        + "Nome: " + nome + "\n"
+                        + "Salário: R$" + calcularSalario(salario) + "\n"
+                        + "Nível: "+nivel + "\n"
+                        + "Departamento: "+ departamento + "\n"
+                        + "Função: " + funcao + "\n";
+        return dados;
+    }
 
     public String getFuncao() {
         return funcao;
