@@ -4,24 +4,27 @@ package base;
 public class DocenteSubstituto extends Docente{
     private int cargaHoraria;
     
-    public DocenteSubstituto(String codigo, String nome, double salario, String nivel, String titulacao){
-        super(codigo, nome, salario, nivel, titulacao);
+    public DocenteSubstituto(String codigo, String nome, String nivel, String departamento, String titulacao){
+        super(codigo, nome, nivel, departamento, titulacao);
         setCargaHoraria(cargaHoraria);
+        setDepartamento(departamento);
     }
     
     @Override
     public double calcularSalario(){
+       double novoSalario = 0;
         if(nivel.equalsIgnoreCase("s1")){
-            salario = salario + (salario*0.05);
+            novoSalario = novoSalario + (novoSalario * Utils.S1);
         }else{
             if(nivel.equalsIgnoreCase("s2")){
-                salario = salario + (salario*0.1);
+                novoSalario = novoSalario + (novoSalario * Utils.S2);
             }else{
-                System.out.println("Não há nível com essa sigla");
+                System.out.println("Nível não existente.");
             }
         }
         
-        return salario;
+        return novoSalario;
+        
     }
 
     public int getCargaHoraria() {
@@ -30,5 +33,13 @@ public class DocenteSubstituto extends Docente{
     
     public void setCargaHoraria(int cargaHoraria){
         this.cargaHoraria = cargaHoraria;
+    }
+    
+    public String getDepartamento(){
+        return departamento;
+    }
+    
+    public void setDepartamnto(String departamento){
+        this.departamento = departamento;
     }
 }

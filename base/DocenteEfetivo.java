@@ -7,28 +7,30 @@ package base;
 public class DocenteEfetivo extends Docente{
     private String area;
     
-    public DocenteEfetivo(String codigo, String nome, double salario, String nivel, String titulacao){
-        super(codigo, nome, salario, nivel, titulacao);
+    public DocenteEfetivo(String codigo, String nome, String nivel, String departamento, String titulacao){
+        super(codigo, nome, nivel, departamento, titulacao);
         setArea(area);
     }
     
     @Override
     public double calcularSalario(){
+        double salarioNovo = 0;
+        
         if(nivel.equalsIgnoreCase("d1")){
-            salario = salario + (salario*0.05);
+            salarioNovo = salarioNovo + (salarioNovo * Utils.D1);
         }else{
             if(nivel.equalsIgnoreCase("d2")){
-                salario = salario + (salario*0.1);
+                salarioNovo = salarioNovo + (salarioNovo * Utils.D2);
             }else{
                 if(nivel.equalsIgnoreCase("d3")){
-                    salario = salario + (salario*0.2);
+                    salarioNovo = salarioNovo + (salarioNovo * Utils.D3);
                 }else{
                     System.out.println("Não há nivel com essa sigla.");
                 }
             }
         }
         
-        return salario;
+        return salarioNovo;
     }
 
     public String getArea() {
@@ -38,4 +40,13 @@ public class DocenteEfetivo extends Docente{
     public void setArea(String area){
         this.area = area;
     }
+    
+    public String getDepartamento(){
+        return departamento;
+    }
+    
+    public void setDepartamnto(String departamento){
+        this.departamento = departamento;
+    }
+    
 }
