@@ -4,24 +4,25 @@ package base;
 public class Tecnico extends Funcionario{
     private String funcao;
     
-    public Tecnico(String codigo, String nome, double salario, String nivel, String funcao){
-        super(codigo, nome, salario, nivel);
+    public Tecnico(String codigo, String nome, String nivel, String funcao, String departamento){
+        super(codigo, nome, nivel, departamento);
         setFuncao(funcao);
     }
     
     @Override 
     public double calcularSalario(){
+        double novoSalario = 0;
         if(nivel.equalsIgnoreCase("t1")){
-            salario = salario + (salario *0.1);
+            novoSalario = novoSalario + (novoSalario * Utils.T1);
         }else{
             if(nivel.equalsIgnoreCase("t2")){
-                salario = salario + (salario * 0.2);
+                novoSalario = novoSalario + (novoSalario * Utils.T2);
             }else{
                 System.out.println("Nível não existente.");
             }
         }
         
-        return salario;
+        return novoSalario;
         
     } 
 

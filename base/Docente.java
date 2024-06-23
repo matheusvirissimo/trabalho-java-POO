@@ -7,8 +7,8 @@ package base;
 public abstract class Docente extends Funcionario {
     protected String titulacao;
     
-    public Docente(String codigo, String nome, double salario, String nivel, String titulacao){
-        super(codigo, nome, salario, nivel);
+    public Docente(String codigo, String nome, String nivel, String departamento, String titulacao){
+        super(codigo, nome, nivel, departamento);
         setTitulacao(titulacao);
     }
     
