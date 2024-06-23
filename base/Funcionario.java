@@ -9,12 +9,13 @@ public abstract class Funcionario {
     protected String nome;
     protected double salario;
     protected String nivel;
+    protected String departamento;
     
-    public Funcionario(String codigo, String nome, double salario, String nivel){
+    public Funcionario(String codigo, String nome, String nivel, String departamento){
         setCodigo(codigo);
         setNome(nome);
-        setSalario(salario);
         setNivel(nivel);
+        setDepartamento(departamento);
     }
     
     public abstract double calcularSalario(); // todas as classes que se extendem precisam
@@ -51,4 +52,11 @@ public abstract class Funcionario {
         this.nivel = nivel;
     }
     
+    public String getDepartamento(){
+        return departamento;
+    }
+    
+    public void setDepartamento(String departamento){
+        this.departamento = departamento;
+    }
 }
