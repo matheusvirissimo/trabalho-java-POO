@@ -18,8 +18,10 @@ public abstract class Funcionario {
         setDepartamento(departamento);
     }
     
-    public abstract double calcularSalario(); // todas as classes que se extendem precisam
-
+    public abstract double calcularSalario(double salario); // todas as classes que se extendem precisam
+    public abstract void exibir();
+    public abstract String dados();
+    
     public String getCodigo() {
         return codigo;
     }
