@@ -3,10 +3,6 @@ package Interface;
 
 import controlador.Controlador;
 
-/**
- *
- * @author Laís Isabella
- */
 public class IURelatorioDocentes extends javax.swing.JFrame {
 
     /**
