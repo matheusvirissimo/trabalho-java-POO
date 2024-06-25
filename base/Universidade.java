@@ -4,6 +4,7 @@ public class Universidade {
     public String nome;
     public Departamento[] departamentos;
     
+    private static Universidade instancia = null;
     private int MAX = 10;
     private int cont = 0;
 
@@ -192,6 +193,14 @@ public class Universidade {
             }
         }
         return relatorio;
+    }
+
+    public static Universidade Instanciar(String nome) {
+        if (instancia == null) {
+            instancia = new Universidade(nome);
+        }
+        
+        return instancia;
     }
     
     public String getNome(){

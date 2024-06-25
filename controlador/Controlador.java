@@ -6,7 +6,7 @@ import base.Universidade;
 
 public class Controlador {
     
-    private Universidade univ;
+    private Universidade univ = Universidade.Instanciar("System");
     
     public Controlador(){
 
